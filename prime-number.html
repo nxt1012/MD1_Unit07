@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Prime Number</title>
 </head>
 <body>
-$END$
+<p id="result"></p>
+<script>
+    //get numbers from user
+    let numbers = +prompt("Enter an integer number:");
+    //declare numbers of prime numbers counted
+    let count = 0;
+    let result = "";
+    for(let i = 1; i < numbers; i++){
+        if(!isPrimeNumber(i))
+            continue;
+        count++;
+        result = result + "  " + i;
+    }
+    document.getElementById("result").innerHTML =`Các số nguyên tố nằm trong khoảng từ 0 đến ${numbers} là: ${result}`;
+    //write function to check whether a number is a prime number
+    function isPrimeNumber(n){
+        if(n <2){
+            return false;
+        }
+        for (let i = 2; i <= Math.floor(Math.sqrt(n)); i++){
+            if (n % i === 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+</script>
 </body>
 </html>

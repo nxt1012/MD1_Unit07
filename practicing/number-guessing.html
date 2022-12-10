@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Number Guessing</title>
 </head>
 <body>
-$END$
+<button id="startGame" onclick="start()">Start Game</button>
+<script>
+
+  function start(){
+    let from = +prompt("Nhập vào cận dưới: ");
+    let to = +prompt("Nhập vào cận trên: ");
+    let random = Math.floor(Math.random() * (to - from)) + from;
+    let userInput = +prompt("Bạn đoán là số gì?");
+    while (userInput !== random) {
+      if(userInput < random)
+        alert("Bạn nhập vào số nhỏ hơn đáp án.");
+      else
+        alert("Bạn nhập vào số lớn hơn đáp án.")
+      userInput = +prompt();
+    }
+    alert("Chúc mừng bạn đã đoán đúng! Nhấn OK để kết thúc trò chơi.")
+  }
+</script>
 </body>
 </html>

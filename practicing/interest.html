@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
 </head>
 <body>
-$END$
+<form name="Tính lãi ngân hàng">
+  <label for="money">Nhập số tiền</label>
+  <input id="money" type="text"><br>
+  <label for="month">Nhập số tháng gửi</label>
+  <input id="month" type="text"><br>
+  <label for="interestRate">Nhập lãi suất theo tháng (%)</label>
+  <input id="interestRate" type="text">
+  <button type="button" onclick="cal()">Tính lãi</button>
+  <p id="result"></p>
+  <script>
+    function cal() {
+      let money = +document.getElementById("money").value;
+      let month = +document.getElementById("month").value;
+      let interestRate = +document.getElementById("interestRate").value;
+      let interest = money * Math.pow((1 + interestRate / 100), month);
+      document.getElementById("result").innerHTML = `Số tiền cả gốc lẫn lãi sẽ nhận được là ${interest}`;
+    }
+  </script>
+</form>
 </body>
 </html>

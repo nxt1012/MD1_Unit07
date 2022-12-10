@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
 </head>
 <body>
-$END$
+<script>
+    let userInput;
+    let total = 0;
+    while (userInput !== -1) {
+        userInput = +prompt("Enter a number:");
+        alert("You've entered number " + userInput);
+        total += userInput;
+    }
+    alert("Total of entered number is " + total)
+</script>
 </body>
 </html>

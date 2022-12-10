@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Fibonacci Array</title>
 </head>
 <body>
-$END$
+<p id="result"></p>
+<script>
+  let fibonacci1 = 1;
+  let fibonacci2 = 1;
+  let fibonacciArray = "";
+  let count = 1;
+  for (; count <21; count ++){
+    fibonacciArray = fibonacciArray + "  " + fibonacci1;
+    let temp = fibonacci2;
+    fibonacci2 += fibonacci1
+    fibonacci1 = temp;
+  }
+  document.getElementById("result").innerHTML = `20 số Fibonacci đầu tiên là: ${fibonacciArray}`;
+</script>
 </body>
 </html>

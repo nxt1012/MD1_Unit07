@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Fibonacci Array</title>
 </head>
 <body>
-$END$
+<p id="result"></p>
+<script>
+  let fibonacci1 = 1;
+  let fibonacci2 = 1;
+  let sum = fibonacci1;
+  let count = 1;
+  for (; count <20; count ++){
+    sum += fibonacci2;
+    let temp = fibonacci2;
+    fibonacci2 += fibonacci1
+    fibonacci1 = temp;
+    console.log(fibonacci1);
+  }
+  document.getElementById("result").innerHTML = `Tổng của 20 số Fibonacci đầu tiên là: ${sum}`;
+</script>
 </body>
 </html>

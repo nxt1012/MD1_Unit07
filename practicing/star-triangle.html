@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Star Triangle</title>
 </head>
 <body>
-$END$
+<p id="up"></p>
+<p id="down"></p>
+<p id="left"></p>
+<p id="right"></p>
+<script>
+  let draw = "";
+  for (let i = 1; i <= 5 ; i++){
+    for (let j = 0; j < i; j++){
+      draw += "*";
+    } draw += "<br>";
+  }
+  document.getElementById("up").innerHTML = draw;
+  draw = "";
+  for (let i = 5; i >= 1; i--){
+    for (let j = 0; j < i; j++){
+      draw += "*"
+    } draw += "<br>";
+  }
+  document.getElementById("down").innerHTML = draw;
+
+  draw = "";
+  for (let i = 5; i >= 1; i--){
+      for (let j = 1; j < i ; j++){
+          draw += " ";
+          }
+      for (let k = 5; k >= i ; k-- ){
+          draw += "*"
+      } draw += "<br>";
+  }
+  document.getElementById("left").innerHTML = draw;
+
+  draw = "";
+  for (let i = 1; i <= 5; i++){
+      for (let j = 1; j < i; j++){
+          draw += "  ";
+      }
+      for (let k = 5; k >= i; k--){
+          draw += "*";
+      } draw += "<br>";
+  }
+  document.getElementById("right").innerHTML = draw;
+
+</script>
 </body>
 </html>
