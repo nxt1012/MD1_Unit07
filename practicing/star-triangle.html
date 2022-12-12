@@ -10,43 +10,47 @@
 <p id="left"></p>
 <p id="right"></p>
 <script>
-  let draw = "";
+  let draw = "<table><tr><td>";
   for (let i = 1; i <= 5 ; i++){
     for (let j = 0; j < i; j++){
-      draw += "*";
-    } draw += "<br>";
-  }
+      draw += "*</td><td>";
+    } draw += "</td></tr><tr><td>";
+  } draw +="</table>";
   document.getElementById("up").innerHTML = draw;
-  draw = "";
+  console.log(draw);
+
+  draw = "<table><tr><td>";
   for (let i = 5; i >= 1; i--){
     for (let j = 0; j < i; j++){
-      draw += "*"
-    } draw += "<br>";
-  }
+      draw += "*</td><td>";
+    } draw += "</td></tr><tr><td>";
+  } draw +="</table>";
   document.getElementById("down").innerHTML = draw;
+  console.log(draw);
 
-  draw = "";
+  draw = "<table><tr><td>";
   for (let i = 5; i >= 1; i--){
       for (let j = 1; j < i ; j++){
-          draw += " ";
+          draw += "</td><td>";
           }
       for (let k = 5; k >= i ; k-- ){
-          draw += "*"
-      } draw += "<br>";
-  }
+          draw += "*</td><td>"
+      } draw += "</td></tr><tr><td>";
+  } draw +="</table>";
   document.getElementById("left").innerHTML = draw;
+  console.log(draw);
 
-  draw = "";
+  draw = "<table><tr><td>";
   for (let i = 1; i <= 5; i++){
       for (let j = 1; j < i; j++){
-          draw += "  ";
+          draw += "</td><td>";
       }
       for (let k = 5; k >= i; k--){
-          draw += "*";
-      } draw += "<br>";
-  }
+          draw += "*</td><td>";
+      } draw += "</td></tr><tr><td>";
+  } draw +="</table>";
   document.getElementById("right").innerHTML = draw;
-
+  console.log(draw);
 </script>
 </body>
 </html>
